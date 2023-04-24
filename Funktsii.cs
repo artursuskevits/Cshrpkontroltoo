@@ -99,7 +99,7 @@ namespace Funktsii
                 {
                     lengthlapsed -= 1;
                     lengthlapsed2 = lengthlapsed;
-                    for (int i = 0; i < lengthlapsed; i++)
+                    for (int i = 0; i < lengthlapsed+1; i++)
                     {
                         LapsedList[i] = i;
                     }
