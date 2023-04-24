@@ -108,19 +108,18 @@ namespace Funktsii
                     while (step>lengthlapsed2)
                     {
                         LapsedList2 = LapsedList.Concat(LapsedList2).ToList();
-                        foreach (int item in LapsedList2)
-                        {
-                            Console.Write(item);
-                        }
+                        
                         lengthlapsed2 += lengthlapsed;
                     }
-                    foreach (int item in LapsedList2)
-                    {
-                        Console.Write(item);
-                    }
+             
                     ustalja = LapsedList2[step-1];
                     LapsedList.RemoveAt(ustalja);
                     Console.WriteLine(" i deleate {0}", ustalja);
+                    step += (step-1);
+                    foreach (int item in LapsedList)
+                    {
+                        Console.Write(item);
+                    }
                 }
                 foreach (int item in LapsedList)
                 {
