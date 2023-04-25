@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Cshrpkontroltoo;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -116,10 +118,7 @@ namespace Funktsii
                     LapsedList.RemoveAt(ustalja);
                     Console.WriteLine(" i deleate {0}", ustalja);
                     step += (step-1);
-                    foreach (int item in LapsedList)
-                    {
-                        Console.Write(item);
-                    }
+                    
                 }
                 foreach (int item in LapsedList)
                 {
@@ -129,6 +128,54 @@ namespace Funktsii
             catch (FormatException ex)
             {
                 Console.WriteLine("Viga!");
+            }
+        }
+        public static void domytask(List<Parni> esimine)
+        {
+            Random rnd = new Random();
+            Parni inimene1 = new Parni();
+            inimene1.Nimi = "Mati";
+            inimene1.Perenimi = "Andreev";
+            inimene1.Vanus = rnd.Next(0, 93);
+            Parni inimene2 = new Parni();
+            inimene2.Nimi = "Andrey";
+            inimene2.Perenimi = "Ivanov";
+            inimene2.Vanus = rnd.Next(0, 93);
+            Parni inimene3 = new Parni();
+            inimene3.Nimi = "Garik";
+            inimene3.Perenimi = "Georgjev";
+            inimene3.Vanus = rnd.Next(0, 93);
+            Parni inimene4 = new Parni();
+            inimene4.Nimi = "Dilan";
+            inimene4.Perenimi = "Ignatjev";
+            inimene4.Vanus = rnd.Next(0, 93);
+            Parni inimene5 = new Parni();
+            inimene5.Nimi = "Maksim";
+            inimene5.Perenimi = "Voronov";
+            inimene5.Vanus = rnd.Next(0, 93);
+            esimine.Add(inimene1);
+            esimine.Add(inimene2);
+            esimine.Add(inimene3);
+            esimine.Add(inimene4);
+            esimine.Add(inimene5);
+            foreach (Parni item in esimine)
+            {
+                Console.WriteLine(item.Nimi+" "+item.Perenimi+" "+item.Vanus);
+            }
+            Console.WriteLine("Now only even age");
+            foreach (Parni item in esimine)
+            {
+                if (item.Vanus%2==0)
+                {
+                    Console.WriteLine(item.Nimi + " " + item.Perenimi + " " + item.Vanus);
+                }
+            }
+        }
+        public static void domaksimtask(List<string> esimine)
+        {
+            foreach (string item in esimine)
+            {
+                Console.WriteLine(item);
             }
         }
     }

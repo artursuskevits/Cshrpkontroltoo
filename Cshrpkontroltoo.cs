@@ -17,11 +17,11 @@ namespace Cshrpkontroltoo
             Funktsii1 Funktsii1 = new Funktsii1();
             while (true) 
             {
-                Console.WriteLine("Choose task\nPrint 1-U1\nPrint 2-U2\nPrint 3-U3\nElse-Break");
+                Console.WriteLine("Choose task\nPrint 1-U1\nPrint 2-U2\nPrint 3-U3\nPrint 4 - My task\nElse-Break");
                 string choosetask=Console.ReadLine();
                 if (choosetask=="1")
                 {
-                    int[] nums = new int[] { 1, 4, 7, 8,15,9};
+                    int[] nums = new int[] { 1, 4, 7, 8,15,9,12,1234};
                     Funktsii1.do1task(nums);
                 }
                 else if (choosetask == "2")
@@ -32,6 +32,16 @@ namespace Cshrpkontroltoo
                 else if (choosetask == "3")
                 {
                     Funktsii1.do3task();
+                }
+                else if (choosetask == "4")
+                {
+                    List<Parni> iniminedic = new List<Parni>();
+                    Funktsii1.domytask(iniminedic);
+                }
+                else if (choosetask == "5")
+                {
+                    List<string> stringlist = new List<string> { "tere", "minu", "niimi", "on", "artur", "ma", "olen", "kolm","aastat","vana" };
+                    Funktsii1.domaksimtask(stringlist);
                 }
                 else
                 {
